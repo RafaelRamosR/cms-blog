@@ -1,21 +1,21 @@
 <?php
 
 class DB extends PDO {
-    private $hostname = 'localhost';
-    private $database = 'cms';
-    private $username = 'root';
-    private $password = '';
-    private $pdo;
-    private $sQuery;
-    private $bConnected = false;
-    private $parameters;
+	private $hostname = 'localhost';
+	private $database = 'cms';
+	private $username = 'root';
+	private $password = '';
+	private $pdo;
+	private $sQuery;
+	private $bConnected = false;
+	private $parameters;
 
-    public function __construct() {
+	public function __construct() {
 		$dsn = 'mysql:dbname='.$this->database.';host='.$this->hostname;
 		parent::__construct($dsn, $this->username, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 	}
 
-	private function connection() {
+	/*private function connection() {
 		$dsn = 'mysql:dbname='.$this->database.';host='.$this->hostname;
 		try {
 			$this->pdo = new PDO($dsn, $this->username, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -27,7 +27,7 @@ class DB extends PDO {
 			echo $e->getMessage();
 			die();
 		}
-	}
+	}*/
 
 	public function CloseConnection() {
 	 	$this->pdo = null;
@@ -65,6 +65,22 @@ class DB extends PDO {
 		}
 	}
 
+	/*public function query($query,$params = null, $fetchmode = PDO::FETCH_ASSOC) {
+		$query = trim($query);
+		$this->Init($query,$params);
+		$rawStatement = explode(" ", $query);
+
+		$statement = strtolower($rawStatement[0]);
+
+		if ($statement === 'select' || $statement === 'show') {
+			return $this->sQuery->fetchAll($fetchmode);
+		} elseif ( $statement === 'insert' ||  $statement === 'update' || $statement === 'delete' ) {
+			return $this->sQuery->rowCount();
+		} else {
+			return NULL;
+		}
+	}*/
+
 	public function column($query,$params = null) {
 		$this->Init($query,$params);
 		$Columns = $this->sQuery->fetchAll(PDO::FETCH_NUM);
@@ -85,6 +101,6 @@ class DB extends PDO {
 		$this->Init($query,$params);
 		return $this->sQuery->fetchColumn();
 	}
-}
 
+}
 ?>
