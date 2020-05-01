@@ -21,8 +21,8 @@
 
   <nav class="nav navbar navbar-expand-lg d-lg-flex flex-lg-column align-items-lg-start">
     <div class="container-fluid d-flex justify-content-end display-lg-none">
-      <a class="gray-opacity" href="#">Iniciar sesión</a>
-      <a class="gray-opacity margin-left-20" href="#">Registro</a>
+      <a class="gray-opacity" href="?page=login">Iniciar sesión</a>
+      <a class="gray-opacity margin-left-20" href="?page=registro">Registro</a>
     </div>
     <a class="navbar-brand nav--title" href="#"><?php echo NOMBRE_BLOG; ?></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,8 +35,8 @@
 
     <div class="collapse navbar-collapse d-lg-flex justify-content-start" id="navbarSupportedContent">
       <div class="container-fluid d-flex justify-content-start display-lg-block">
-        <a class="gray-opacity" href="#">Iniciar sesión</a>
-        <a class="gray-opacity margin-left-20" href="#">Registro</a>
+        <a class="gray-opacity" href="?page=login">Iniciar sesión</a>
+        <a class="gray-opacity margin-left-20" href="?page=registro">Registro</a>
       </div>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -73,7 +73,7 @@
               </h2>
               <div class="post">
                 <div class="post__img__contain">
-                  <img class="post--img" src="https://dummyimage.com/300x200/000/adadad.png&text=+" alt="">
+                  <img class="post--img" src="portadas/<?=$r['portada'];?>" alt="">
                 </div>
                 <div class="post__description">
                   <em class="post__description--em">Publicador por: <strong><?=$r['apodo']; ?></strong></em>
@@ -117,8 +117,12 @@
         ?>
       </div>
       <aside class="sidebar col-12 col-xl-3 d-lg-flex flex-xl-column">
-        <div class="widget__twitter text-center"><p>widget</p></div>
-        <div class="widget__comment text-center"><p>widget</p></div>
+          <div class="widget__twitter text-center" style="overflow: scroll;">
+            <?php require_once 'views/widgets/timelineTwitter.php'; ?>
+          </div>
+          <div class="widget__mapa text-center">
+            <?php require_once 'views/widgets/mapa.php'; ?>
+          </div>
       </aside>
     </section>
   </div>

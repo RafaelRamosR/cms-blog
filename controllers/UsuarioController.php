@@ -6,20 +6,21 @@ class UsuarioController {
 
 	public function login() {
 		session_start();
-		session_destroy();
-		require_once('./views/includes/header.php');
-		require_once('./views/paginas/login.php');
-		require_once('./views/includes/footer.php');
+    session_destroy();
+    require_once('./views/includes/header.php');
+    require_once('./views/paginas/login.php');
+    require_once('./views/includes/footer.php');
 	}
 
 	public function registro() {
-		require_once('./views/includes/header.php');
-		require_once('./views/paginas/registro.php');
-		require_once('./views/includes/footer.php');
+    require_once('./views/includes/header.php');
+    require_once('./views/paginas/registro.php');
+    require_once('./views/includes/footer.php');
 	}
 
 	public function guardarUsuario($datos) {
 		$errores = '';
+		$datos['id_rol'] = 1;
 		if (!isset($datos['nombre'])) {
 			$errores .= '<p>Falta el nombre</p>';
 		} else if (!isset($datos['apodo'])) {
