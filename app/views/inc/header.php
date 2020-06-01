@@ -9,9 +9,10 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <!-- Stylesheets -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="<?php echo ROUTE_URL; ?>css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo ROUTE_URL; ?>css/styles.css" rel="stylesheet">
+    <link href="<?php echo ROUTE_URL; ?>css/responsive.css" rel="stylesheet">
+    <link href="<?php echo ROUTE_URL; ?>css/normalize.css" rel="stylesheet">
 </head>
 
 <body>

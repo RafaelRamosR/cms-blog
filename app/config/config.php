@@ -10,7 +10,7 @@
     //echo dirname(dirname(__FILE__));
     define('ROUTE_APP', dirname(dirname(__FILE__)));
 
-    // Ruta url Ejemplo: http://localhost/php-mvc/
-    define('ROUTE_URL', '_URL_');
+    // Ruta url Ejemplo: http://localhost/cms/
+    define('ROUTE_URL', 'http://localhost/cms/public/');
 
     define('SITENAME', '_SITE_NAME_');

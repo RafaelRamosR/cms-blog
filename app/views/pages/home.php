@@ -1,5 +1,5 @@
-<?php require_once '../app/views/inc/header.php'; ?>
-<?php require_once '../app/views/inc/menu.php'; ?>
+<?php require_once ROUTE_APP.'/views/inc/header.php'; ?>
+<?php require_once ROUTE_APP.'/views/inc/menu.php'; ?>
 <section class="blog-area section">
     <div class="container">
         <div class="row">
@@ -181,4 +181,4 @@
 
     </div><!-- container -->
 </section><!-- section -->
-<?php require_once '../app/views/inc/footer.php'; ?>
+<?php require_once ROUTE_APP.'/views/inc/footer.php'; ?>
