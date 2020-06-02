@@ -136,12 +136,25 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 
 
 /* ---------------------------------
-4. SLIDER
+4. HEADER IMAGE
 --------------------------------- */
+.header-image {
+	display:grid;
+	position: relative;
+	overflow: hidden;
+	height: 300px; 
+	width: 100%;
+}
 
-.slider{ height: 300px; width: 100%; background-image: url(../img/post/slider-1.jpg); background-size: cover; }  
- 
-.slider .title{ color: #fff; text-shadow: 2px 2px 10px rgba(0,0,0,.3); }
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-image h1 {
+	font-size: 8em;
+}
 
  
 /* ---------------------------------

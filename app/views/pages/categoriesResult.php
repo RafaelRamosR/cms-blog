@@ -1,8 +1,11 @@
 <?php require_once ROUTE_APP . '/views/inc/header.php'; ?>
 <?php require_once ROUTE_APP . '/views/inc/menu.php'; ?>
-<div class="slider display-table center-text">
-  <h1 class="display-table-cell title--slider"><?php echo $data['category']; ?></h1>
-</div><!-- slider -->
+
+<!-- header image -->
+<div class="header-image">
+  <h1 class="title-category"><?php echo $data['category']; ?></h1>
+  <img src="<?php echo ROUTE_URL; ?>img/post/slider-1.jpg" alt="">
+</div>
 
 <section class="blog-area section">
   <div class="container">
