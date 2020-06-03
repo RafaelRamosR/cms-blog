@@ -12,7 +12,7 @@
               <div class="blog-image">
                 <img src="<?php echo ROUTE_URL; ?>img/post/brooke-lark-194251.jpg" alt="Blog Image">
               </div>
-              <h1 class="title title-category">CATEGORIA</h1>
+              <h1 class="title-category">CATEGORIA</h1>
             </a>
             <div class="blog-info">
               <ul class="post-footer">
@@ -35,7 +35,7 @@
         <div class="card h-100">
           <div class="single-post post-style-1">
             <div class="blog-image"><img src="<?php echo ROUTE_URL; ?>img/post/audrey-jackson-260657.jpg" alt="Blog Image"></div>
-            <h1 class="title title-category">CATEGORIA</h1>
+            <h1 class="title-category">CATEGORIA</h1>
             <div class="blog-info">
               <ul class="post-footer">
                 <li><a href="#">
@@ -57,7 +57,7 @@
         <div class="card h-100">
           <div class="single-post post-style-1">
             <div class="blog-image"><img src="<?php echo ROUTE_URL; ?>img/post/marion-michele-330691.jpg" alt="Blog Image"></div>
-            <h1 class="title title-category">CATEGORIA</h1>
+            <h1 class="title-category">CATEGORIA</h1>
             <div class="blog-info">
               <ul class="post-footer">
                 <li><a href="#">

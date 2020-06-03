@@ -151,11 +151,6 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
   height: 100%;
   object-fit: cover;
 }
-
-.header-image h1 {
-	font-size: 8em;
-}
-
  
 /* ---------------------------------
 5. SINGLE POST
@@ -301,14 +296,20 @@ footer .icons > li > a{ height: 40px; width: 40px; border-radius: 40px; line-hei
 footer .icons > li > a:hover{ transform: translateY(-2px); box-shadow: 5px 10px 20px rgba(0,0,0,.3); }
 
 /* My Modifications */
+
+.title-long { font-size: 2.5rem; font-weight: 900; }
+
 .title a, .pre-title a, .name { font-weight: 500; }
+
 a.link-post { display:inline; }
+
 h1.title { font-size: 1.2em; line-height: 1.5; font-weight: 500; }
-.title--slider { font-size: 4em; font-weight: 500; color: #fff; }
+
 h1.pre-title { font-size: .9em; letter-spacing: 1px; }
+
 .title-category {
 	font-size: 3em;
-	font-weight:300;
+	font-weight:500;
 	position:absolute;
 	top: 0;
 	left: 0;
@@ -322,4 +323,45 @@ h1.pre-title { font-size: .9em; letter-spacing: 1px; }
 	justify-content:center;
 	align-items:center;
   text-align: center;
+}
+
+/* My Modifications - USER */
+
+h2.pre-title { font-size: 1.2em; letter-spacing: 1px; }
+
+.bio { font-size: 1.4em; }
+
+.perfile-picture {
+  width: 200px;
+}
+
+/* BIOGRAPHY */
+.perfile {
+	background-color: hsla(0, 0%, 80%, 1);
+}
+
+.perfile-navbar{
+	display:grid;
+	width: 100%;
+	height: 3em;
+}
+
+.perfile-items {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 2fr;
+	font-size: 1.3em;
+	align-items: end;
+  text-align: center;
+  cursor: pointer;
+}
+
+.perfile-item {
+	--border-color: #000;
+	border-bottom: solid var(--border-color);
+}
+
+.selectItem {
+  --border-color: #498bf9;
+  color: var(--border-color);
+	border-bottom: solid var(--border-color);
 }

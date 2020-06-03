@@ -90,21 +90,37 @@
 /* ---------------------------------
 6. SOCIAL ICONS
 --------------------------------- */
-.social-icons {
+
+.user-icons, .social-icons {
   display: grid;
-  grid-template-columns: repeat(6,1fr);
   grid-gap: 0.1em;
   grid-auto-rows: minmax(3em, auto);
 }
 
+.social-icons {
+  grid-template-columns: repeat(6,1fr);
+}
+
+.user-icons {
+  grid-template-columns: repeat(4,1fr);
+}
+
 .social-icon {
   display: grid;
+  font-size: 2.5em;
+}
+
+.user-icon {
+  display: flex;
+  font-size: 1.1em;
+}
+
+.user-icon, .social-icon {
   align-items: center;
   justify-content: center;
   position: relative;
   margin: 0 0.5rem;
   cursor: pointer;
-  font-size: 2.5em;
   text-decoration: none;
 }
 

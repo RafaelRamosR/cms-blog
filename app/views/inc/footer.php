@@ -25,7 +25,7 @@
 <!-- SCIPTS -->
 
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-
+<script src="<?php echo ROUTE_URL ?>js/scripts.js"></script>
 
 </body>
 
