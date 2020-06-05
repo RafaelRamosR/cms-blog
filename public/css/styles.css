@@ -365,3 +365,62 @@ h2.pre-title { font-size: 1.2em; letter-spacing: 1px; }
   color: var(--border-color);
 	border-bottom: solid var(--border-color);
 }
+
+/* PERFILE - DASHBOOARD */
+
+.main {
+  grid-area: main;
+  background-color: #cef9e2;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px; 
+  height: 150px;
+  background-color: #cbbcf6;
+  color: slategray;
+}
+
+.main-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  grid-auto-rows: 94px;
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+.overviewpanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #cbbcf6;
+}
+
+.main-panels {
+  column-count: 1;
+  column-gap: 20px;
+  margin: 20px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #cbbcf6;
+  margin-bottom: 20px;
+  -webkit-column-break-inside: avoid;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Medium screens breakpoint (1050px) */
+@media only screen and (min-width: 65.625em) {
+  /* Break out main panels into two columns */
+  .main-panels {
+    column-count: 2;
+  }
+}

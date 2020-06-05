@@ -72,7 +72,6 @@
 
     </section>
     <!--Section: Content-->
-
   </div>
 
   <div class="container">
@@ -577,10 +576,139 @@
 
     </div><!-- container -->
   </section>
+
   <section id="viewDashboard" class="text-center d-none">
-    <h1>Dashboard - en proceso</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit veniam hic velit nemo sapiente corrupti, consectetur neque adipisci, eaque, natus accusantium repudiandae earum explicabo distinctio. Beatae vero voluptatibus odit dignissimos.</p>
+    <h1>Dashboard</h1>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row" id="portfolio">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card" id="storageCard">
+              <div class="card-title">Visitas</div>
+              <div class="card-icon"><ion-icon name="eye-outline"></ion-icon></div>
+              <div class="card-data">99</div>
+              <hr />
+              <div class="card-hint"><ion-icon name="eye-outline"></ion-icon><a href="#">Mira las estadísticas.</a></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card" id="loveCard">
+              <div class="card-title">Amor recibido</div>
+              <div class="card-icon"><ion-icon name="heart-outline"></ion-icon></div>
+              <div class="card-data">101</div>
+              <hr />
+              <div class="card-hint"><ion-icon name="heart-outline"></ion-icon><a href="#">Comparte tus logros.</a></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card" id="pizzaCard">
+              <div class="card-title">Seguidores</div>
+              <div class="card-icon"><ion-icon name="people-outline"></ion-icon></div>
+              <div class="card-data">120</div>
+              <hr />
+              <div class="card-hint"><ion-icon name="people-outline"></ion-icon><a href="#">Observa las estádisticas.</a></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card" id="gameCard">
+              <div class="card-title">Comentarios</div>
+              <div class="card-icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></div>
+              <div class="card-data">1800+</div>
+              <hr />
+              <div class="card-hint"><ion-icon name="chatbox-ellipses-outline"></ion-icon><a href="#">Comentarios recientes</a></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card">
+              <canvas id="userCanvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </article>
 
 <?php require_once ROUTE_APP . '/views/inc/footer.php'; ?>
+<script>
+  /* GLOBAL VALUES */
+  const userCanvas = document.getElementById("userCanvas").getContext('2d');
+  //Chart.defaults.global.defaultFontFamily = "Lato";
+  //Chart.defaults.global.defaultFontSize = 18;
+  const viewDataColor = userCanvas.createLinearGradient(0, 0, 255, 100)
+  viewDataColor.addColorStop(0, "#5E35B1")
+  viewDataColor.addColorStop(1, "#039BE5");
+  const reactionDataColor = userCanvas.createLinearGradient(255, 192, 203, 100)
+  reactionDataColor.addColorStop(0, "#F50057")
+  reactionDataColor.addColorStop(1, "#FF8A80");
+  const commentDataColor = userCanvas.createLinearGradient(255, 165, 0, 100)
+  commentDataColor.addColorStop(0, "#fb8c00")
+  commentDataColor.addColorStop(1, "#FFCA29");
+
+  const viewData = {
+      label: "Visitas",
+      data: [0, 59, 75, 20, 20, 55, 40],
+      fill: false,
+      pointBackgroundColor: 'blue',
+      borderColor: viewDataColor
+  };
+
+  const reactionData = {
+      label: "Reacciones",
+      data: [20, 15, 60, 60, 65, 30],
+      //lineTension: 0,
+      fill: false,
+      borderColor: reactionDataColor
+  };
+
+  const commentData = {
+      label: "Comentarios",
+      data: [0, 15, 30, 40, 10, 50],
+      //lineTension: 0,
+      fill: false,
+      borderColor: commentDataColor
+  };
+
+  const userData = {
+    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"],
+    datasets: [viewData, reactionData, commentData]
+  };
+
+  const chartOptions = {
+    responsive: true,
+          title: {
+            display: true,
+            text: 'ESTADÍSTICAS DE TUS ARTÍCULOS'
+          },
+          tooltips: {
+            mode: 'index',
+            intersect: false,
+          },
+          hover: {
+            mode: 'nearest',
+            intersect: true
+          },
+          scales: {
+            xAxes: [{
+              display: true,
+              scaleLabel: {
+                display: true,
+                labelString: 'Meses'
+              }
+            }],
+            yAxes: [{
+              display: true,
+              scaleLabel: {
+                display: true,
+                labelString: 'Valores'
+              }
+            }]
+          }
+  };
+
+  const lineChart = new Chart(userCanvas, {
+    type: 'line',
+    data: userData,
+    options: chartOptions
+  });
+</script>

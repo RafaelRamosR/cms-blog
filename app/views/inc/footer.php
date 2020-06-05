@@ -8,11 +8,11 @@
           <p class="copyright">Bona @ 2017. All rights reserved.</p>
           <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
           <ul class="icons">
-            <li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
-            <li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
-            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-            <li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
-            <li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-reddit"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-vimeo"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
           </ul>
 
         </div><!-- footer-section -->
@@ -25,6 +25,7 @@
 <!-- SCIPTS -->
 
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="<?php echo ROUTE_URL ?>js/scripts.js"></script>
 
 </body>
