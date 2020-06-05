@@ -178,7 +178,7 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 
 .single-post .post-footer > li > a{ line-height: 45px; width: 100%; }
 
-.single-post .post-footer i{ display: inline-block; margin-right: 10px; opacity: .6; font-size: 1.1em; }
+.single-post .post-footer ion-icon { display: inline-block; margin-right: 10px; opacity: .6; font-size: 1.1em; }
 
 
 /* ---------------------------------
@@ -323,104 +323,4 @@ h1.pre-title { font-size: .9em; letter-spacing: 1px; }
 	justify-content:center;
 	align-items:center;
   text-align: center;
-}
-
-/* My Modifications - USER */
-
-h2.pre-title { font-size: 1.2em; letter-spacing: 1px; }
-
-.bio { font-size: 1.4em; }
-
-.perfile-picture {
-  width: 200px;
-}
-
-/* BIOGRAPHY */
-.perfile {
-	background-color: hsla(0, 0%, 80%, 1);
-}
-
-.perfile-navbar{
-	display:grid;
-	width: 100%;
-	height: 3em;
-}
-
-.perfile-items {
-	display: grid;
-	grid-template-columns: 1fr 2fr 2fr 2fr;
-	font-size: 1.3em;
-	align-items: end;
-  text-align: center;
-  cursor: pointer;
-}
-
-.perfile-item {
-	--border-color: #000;
-	border-bottom: solid var(--border-color);
-}
-
-.selectItem {
-  --border-color: #498bf9;
-  color: var(--border-color);
-	border-bottom: solid var(--border-color);
-}
-
-/* PERFILE - DASHBOOARD */
-
-.main {
-  grid-area: main;
-  background-color: #cef9e2;
-}
-
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-  padding: 20px; 
-  height: 150px;
-  background-color: #cbbcf6;
-  color: slategray;
-}
-
-.main-overview {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-  grid-auto-rows: 94px;
-  grid-gap: 20px;
-  margin: 20px;
-}
-
-.overviewpanel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #cbbcf6;
-}
-
-.main-panels {
-  column-count: 1;
-  column-gap: 20px;
-  margin: 20px;
-}
-
-.panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background-color: #cbbcf6;
-  margin-bottom: 20px;
-  -webkit-column-break-inside: avoid;
-  padding: 24px;
-  box-sizing: border-box;
-}
-
-/* Medium screens breakpoint (1050px) */
-@media only screen and (min-width: 65.625em) {
-  /* Break out main panels into two columns */
-  .main-panels {
-    column-count: 2;
-  }
 }

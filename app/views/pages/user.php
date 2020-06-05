@@ -1,13 +1,10 @@
 <?php require_once ROUTE_APP . '/views/inc/header.php'; ?>
 <?php require_once ROUTE_APP . '/views/inc/menu.php'; ?>
-
+<!-- user information -->
 <article class="perfile">
   <div class="container py-5">
-
-    <!--Section: Content-->
+    <!-- section user info -->
     <section class="team-section text-center dark-grey-text">
-
-      <!-- Grid row -->
       <div class="row">
         <!-- Grid column -->
         <div class="col-md-12 mb-4 mx-auto">
@@ -68,12 +65,9 @@
         </div>
         <!-- Grid column -->
       </div>
-      <!-- Grid row -->
-
     </section>
-    <!--Section: Content-->
   </div>
-
+  <!-- menu user -->
   <div class="container">
     <section class="row">
       <div class="perfile-navbar">
@@ -88,7 +82,9 @@
   </div>
 </article>
 
+<!-- user configuration -->
 <article class="mt-5">
+  <!-- section perfile -->
   <section id="viewPerfile" class="blog-area text-center">
     <div class="container">
       <h1>ARTÍCULOS PUBLICADOS</h1>
@@ -453,6 +449,7 @@
       </div>
     </div>
   </section>
+  <!-- section setting -->
   <section id="viewSetting" class="text-center d-none">
     <h1>Configuración de usuario</h1>
     <div class="col-lg-6 col-md-12 mx-auto">
@@ -502,6 +499,7 @@
       </div><!-- info-area -->
     </div><!-- col-lg-4 col-md-12 -->
   </section>
+  <!-- section comments -->
   <section id="viewComments" class="text-center d-none">
     <!-- comments -->
     <div class="container">
@@ -576,53 +574,274 @@
 
     </div><!-- container -->
   </section>
-
-  <section id="viewDashboard" class="text-center d-none">
-    <h1>Dashboard</h1>
+  <!-- section user dashboard -->
+  <section id="viewDashboard" class="d-none">
+    <h1 class="text-center mb-5">Dashboard</h1>
     <div class="container-fluid">
       <div class="container">
         <div class="row" id="portfolio">
+          <!-- views count -->
           <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <div class="card" id="storageCard">
               <div class="card-title">Visitas</div>
-              <div class="card-icon"><ion-icon name="eye-outline"></ion-icon></div>
+              <div class="card-icon">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
               <div class="card-data">99</div>
               <hr />
-              <div class="card-hint"><ion-icon name="eye-outline"></ion-icon><a href="#">Mira las estadísticas.</a></div>
+              <div class="card-hint">
+                <ion-icon name="eye-outline"></ion-icon><a href="#">Mira las estadísticas.</a>
+              </div>
             </div>
           </div>
+          <!-- reactions count -->
           <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <div class="card" id="loveCard">
               <div class="card-title">Amor recibido</div>
-              <div class="card-icon"><ion-icon name="heart-outline"></ion-icon></div>
+              <div class="card-icon">
+                <ion-icon name="heart-outline"></ion-icon>
+              </div>
               <div class="card-data">101</div>
               <hr />
-              <div class="card-hint"><ion-icon name="heart-outline"></ion-icon><a href="#">Comparte tus logros.</a></div>
+              <div class="card-hint">
+                <ion-icon name="heart-outline"></ion-icon><a href="#">Comparte tus logros.</a>
+              </div>
             </div>
           </div>
+          <!-- followers count -->
           <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <div class="card" id="pizzaCard">
               <div class="card-title">Seguidores</div>
-              <div class="card-icon"><ion-icon name="people-outline"></ion-icon></div>
+              <div class="card-icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
               <div class="card-data">120</div>
               <hr />
-              <div class="card-hint"><ion-icon name="people-outline"></ion-icon><a href="#">Observa las estádisticas.</a></div>
+              <div class="card-hint">
+                <ion-icon name="people-outline"></ion-icon><a href="#">Observa las estádisticas.</a>
+              </div>
             </div>
           </div>
+          <!-- comments count -->
           <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <div class="card" id="gameCard">
               <div class="card-title">Comentarios</div>
-              <div class="card-icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></div>
+              <div class="card-icon">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+              </div>
               <div class="card-data">1800+</div>
               <hr />
-              <div class="card-hint"><ion-icon name="chatbox-ellipses-outline"></ion-icon><a href="#">Comentarios recientes</a></div>
+              <div class="card-hint">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon><a href="#">Comentarios recientes</a>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6">
+          <!-- user chart -->
+          <div class="col-12 col-md-6">
             <div class="card">
               <canvas id="userCanvas"></canvas>
             </div>
           </div>
+          <!-- list comments -->
+          <div class="col-12 col-md-6">
+            <div class="card list-comment">
+              <h1 class="title text-center">LISTADO DE COMENTARIOS</h1>
+              <!-- list item -->
+              <div class="comment list-item">
+                <div class="post-info">
+                  <h1 class="pre-title"><a href="#"> Nombre del artículo</a></h1>
+                  <a class="name" href="#">Katy Liu</a>
+                  <h6 class="date">on Sep 29, 2017 at 9:48 am</h6>
+                </div><!-- post-info -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                  Ut enim ad minim veniam</p>
+                <div class="text-right">
+                  <button class="btn btn-outline btn-sm btn-light"><a href="#">Responder</a></button>
+                </div>
+              </div>
+              <!-- list item -->
+              <div class="comment list-item">
+                <div class="post-info">
+                  <h1 class="pre-title"><a href="#"> Nombre del artículo</a></h1>
+                  <a class="name" href="#">Katy Liu</a>
+                  <h6 class="date">on Sep 29, 2017 at 9:48 am</h6>
+                </div><!-- post-info -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                  Ut enim ad minim veniam</p>
+                <div class="text-right">
+                  <button class="btn btn-outline btn-sm btn-light"><a href="#">Responder</a></button>
+                </div>
+              </div>
+              <!-- list item -->
+              <div class="comment list-item">
+                <div class="post-info">
+                  <h1 class="pre-title"><a href="#"> Nombre del artículo</a></h1>
+                  <a class="name" href="#">Katy Liu</a>
+                  <h6 class="date">on Sep 29, 2017 at 9:48 am</h6>
+                </div><!-- post-info -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                  Ut enim ad minim veniam</p>
+                <div class="text-right">
+                  <button class="btn btn-outline btn-sm btn-light"><a href="#">Responder</a></button>
+                </div>
+              </div>
+              <!-- list item -->
+              <div class="comment list-item">
+                <div class="post-info">
+                  <h1 class="pre-title"><a href="#"> Nombre del artículo</a></h1>
+                  <a class="name" href="#">Katy Liu</a>
+                  <h6 class="date">on Sep 29, 2017 at 9:48 am</h6>
+                </div><!-- post-info -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                  Ut enim ad minim veniam</p>
+                <div class="text-right">
+                  <button class="btn btn-outline btn-sm btn-light"><a href="#">Responder</a></button>
+                </div>
+              </div>
+              <!-- view more button -->
+              <div class="mx-auto">
+                <a class="more-comment-btn" href="#">VER MÁS</a>
+              </div>
+              <br><br>
+            </div>
+          </div>
+          <!-- table crud post -->
+          <div class="col-12 projects mb-4">
+            <div class="projects-inner table-responsive">
+              <table class="projects-table table">
+                <thead>
+                  <tr>
+                    <th>Post</th>
+                    <th>Publicación</th>
+                    <th>Vistas</th>
+                    <th>Reacciones</th>
+                    <th>Comentarios</th>
+                    <th>Estado</th>
+                    <th class="text-center">Acciones</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>Name post</p>
+                      <p class="subrow">Category</p>
+                    </td>
+                    <td>
+                      <p>17th Oct, 15</p>
+                    </td>
+                    <td>
+                      <p>0</p>
+                    </td>
+                    <td>
+                      <p>0</p>
+                    </td>
+                    <td>
+                      <p>0</p>
+                    </td>
+                    <td class="status">
+                      <span class="status-text status-orange">Borrador</span>
+                    </td>
+                    <td>
+                      <form class="form" method="POST">
+                        <div class="selectric-wrapper selectric-action-box">
+                          <div class="selectric-hide-select">
+                            <select class="action-box" tabindex="0">
+                              <option>Acciones</option>
+                              <option>Visualizar</option>
+                              <option>Modificar</option>
+                              <option>Eliminar</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Name post</p>
+                      <p class="subrow">Category</p>
+                    </td>
+                    <td>
+                      <p>17th Oct, 15</p>
+                    </td>
+                    <td>
+                      <p>343</p>
+                    </td>
+                    <td>
+                      <p>70</p>
+                    </td>
+                    <td>
+                      <p>40</p>
+                    </td>
+                    <td class="status">
+                      <span class="status-text status-green">Publicado</span>
+                    </td>
+                    <td>
+                      <form class="form" method="POST">
+                        <div class="selectric-wrapper selectric-action-box">
+                          <div class="selectric-hide-select">
+                            <select class="action-box" tabindex="0">
+                              <option>Acciones</option>
+                              <option>Visualizar</option>
+                              <option>Modificar</option>
+                              <option>Eliminar</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Name post</p>
+                      <p class="subrow">Category</p>
+                    </td>
+                    <td>
+                      <p>17th Oct, 15</p>
+                    </td>
+                    <td>
+                      <p>0</p>
+                    </td>
+                    <td>
+                      <p>0</p>
+                    </td>
+                    <td>
+                      <p>0</p>
+                    </td>
+                    <td class="status">
+                      <span class="status-text status-red">No aprovado</span>
+                    </td>
+                    <td>
+                      <form class="form" method="POST">
+                        <div class="selectric-wrapper selectric-action-box">
+                          <div class="selectric-hide-select">
+                            <select class="action-box" tabindex="0">
+                              <option>Acciones</option>
+                              <option>Visualizar</option>
+                              <option>Modificar</option>
+                              <option>Eliminar</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="7" class="text-center">
+                      <a href="#">Ver más</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -630,80 +849,97 @@
 </article>
 
 <?php require_once ROUTE_APP . '/views/inc/footer.php'; ?>
+
+<!-- scroll efect for view comment dashboard - .list-item
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+-->
 <script>
   /* GLOBAL VALUES */
   const userCanvas = document.getElementById("userCanvas").getContext('2d');
   //Chart.defaults.global.defaultFontFamily = "Lato";
   //Chart.defaults.global.defaultFontSize = 18;
+
   const viewDataColor = userCanvas.createLinearGradient(0, 0, 255, 100)
   viewDataColor.addColorStop(0, "#5E35B1")
   viewDataColor.addColorStop(1, "#039BE5");
   const reactionDataColor = userCanvas.createLinearGradient(255, 192, 203, 100)
   reactionDataColor.addColorStop(0, "#F50057")
   reactionDataColor.addColorStop(1, "#FF8A80");
+  const followDataColor = userCanvas.createLinearGradient(0, 128, 0, 100)
+  followDataColor.addColorStop(0, "#43A047")
+  followDataColor.addColorStop(1, "#59FF3B");
   const commentDataColor = userCanvas.createLinearGradient(255, 165, 0, 100)
-  commentDataColor.addColorStop(0, "#fb8c00")
+  commentDataColor.addColorStop(0, "#FB8C00")
   commentDataColor.addColorStop(1, "#FFCA29");
 
   const viewData = {
-      label: "Visitas",
-      data: [0, 59, 75, 20, 20, 55, 40],
-      fill: false,
-      pointBackgroundColor: 'blue',
-      borderColor: viewDataColor
+    label: "Visitas",
+    data: [0, 59, 75, 20, 20, 55, 40],
+    fill: false,
+    pointBackgroundColor: viewDataColor,
+    borderColor: viewDataColor
   };
 
   const reactionData = {
-      label: "Reacciones",
-      data: [20, 15, 60, 60, 65, 30],
-      //lineTension: 0,
-      fill: false,
-      borderColor: reactionDataColor
+    label: "Reacciones",
+    data: [20, 15, 60, 60, 65, 30],
+    //lineTension: 0,
+    fill: false,
+    pointBackgroundColor: reactionDataColor,
+    borderColor: reactionDataColor
+  };
+
+  const followData = {
+    label: "Segudidores",
+    data: [3, 6, 5, 10, 4, 23],
+    fill: false,
+    pointBackgroundColor: followDataColor,
+    borderColor: followDataColor
   };
 
   const commentData = {
-      label: "Comentarios",
-      data: [0, 15, 30, 40, 10, 50],
-      //lineTension: 0,
-      fill: false,
-      borderColor: commentDataColor
+    label: "Comentarios",
+    data: [0, 15, 30, 40, 10, 50],
+    fill: false,
+    pointBackgroundColor: commentDataColor,
+    borderColor: commentDataColor
   };
 
   const userData = {
     labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"],
-    datasets: [viewData, reactionData, commentData]
+    datasets: [viewData, reactionData, followData, commentData]
   };
 
   const chartOptions = {
     responsive: true,
-          title: {
-            display: true,
-            text: 'ESTADÍSTICAS DE TUS ARTÍCULOS'
-          },
-          tooltips: {
-            mode: 'index',
-            intersect: false,
-          },
-          hover: {
-            mode: 'nearest',
-            intersect: true
-          },
-          scales: {
-            xAxes: [{
-              display: true,
-              scaleLabel: {
-                display: true,
-                labelString: 'Meses'
-              }
-            }],
-            yAxes: [{
-              display: true,
-              scaleLabel: {
-                display: true,
-                labelString: 'Valores'
-              }
-            }]
-          }
+    title: {
+      display: true,
+      text: 'ESTADÍSTICAS DE TUS ARTÍCULOS'
+    },
+    tooltips: {
+      mode: 'index',
+      intersect: false,
+    },
+    hover: {
+      mode: 'nearest',
+      intersect: true
+    },
+    scales: {
+      xAxes: [{
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Meses'
+        }
+      }],
+      yAxes: [{
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Valores'
+        }
+      }]
+    }
   };
 
   const lineChart = new Chart(userCanvas, {

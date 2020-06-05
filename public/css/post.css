@@ -91,6 +91,67 @@
 6. SOCIAL ICONS
 --------------------------------- */
 
+/* My Modifications - USER */
+
+h2.pre-title { font-size: 1.2em; letter-spacing: 1px; }
+
+.bio { font-size: 1.4em; }
+
+.perfile-picture {
+  width: 200px;
+}
+
+/* BIOGRAPHY */
+.perfile {
+	background-color: hsla(0, 0%, 80%, 1);
+}
+
+.perfile-navbar{
+	display:grid;
+	width: 100%;
+	height: 3em;
+}
+
+.perfile-items {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 2fr;
+	font-size: 1.3em;
+	align-items: end;
+  text-align: center;
+  cursor: pointer;
+}
+
+.perfile-item {
+	--border-color: #000;
+	border-bottom: solid var(--border-color);
+}
+
+.selectItem {
+  --border-color: #498bf9;
+  color: var(--border-color);
+	border-bottom: solid var(--border-color);
+}
+
+/* PERFILE - DASHBOOARD */
+.list-comment {
+  height: 278px;
+  overflow-y: auto;
+}
+
+.list-item {
+  margin: 10px 20px;
+  padding: 0 30px;
+  background-color: #edf3f3;
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* Break out main icons into two columns */
+  .user-icons {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+}
+
 .user-icons, .social-icons {
   display: grid;
   grid-gap: 0.1em;
@@ -122,6 +183,10 @@
   margin: 0 0.5rem;
   cursor: pointer;
   text-decoration: none;
+}
+
+.user-icon span {
+  padding: 0 .5em;
 }
 
 .btn-heart {
