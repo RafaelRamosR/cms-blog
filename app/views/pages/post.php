@@ -262,7 +262,7 @@
           </form>
         </div><!-- comment-form -->
 
-        <h1>COMMENTS(12)</h1>
+        <h2>COMMENTS(12)</h2>
 
         <div class="commnets-area text-left">
           <div class="comment">

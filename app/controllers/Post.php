@@ -17,4 +17,16 @@
             echo "ERROR POST NO ENCONTRADO";
           }
         }
+
+        public function write($slug = "")
+        {
+          if($slug !== ""){
+            $data = [
+              'slug' => $slug
+            ];
+            $this->view('pages/postWrite', $data);
+          }else{
+            echo "ERROR POST NO ENCONTRADO";
+          }
+        }
     }

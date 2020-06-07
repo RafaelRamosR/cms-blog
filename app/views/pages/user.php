@@ -853,6 +853,7 @@
 <!-- scroll efect for view comment dashboard - .list-item
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 -->
+<script src="<?php echo ROUTE_URL ?>js/scripts.js"></script>
 <script>
   /* GLOBAL VALUES */
   const userCanvas = document.getElementById("userCanvas").getContext('2d');

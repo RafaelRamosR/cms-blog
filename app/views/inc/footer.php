@@ -22,11 +22,10 @@
 </footer>
 
 
-<!-- SCIPTS -->
+<!-- SCRIPTS -->
 
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="<?php echo ROUTE_URL ?>js/scripts.js"></script>
 
 </body>
 
