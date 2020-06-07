@@ -16,6 +16,7 @@
     <!-- normalize -->
     <link href="<?php echo ROUTE_URL; ?>css/normalize.css" rel="stylesheet">
     <!-- Stylesheets -->
+    <link href="<?php echo ROUTE_URL; ?>css/login.css" rel="stylesheet">
     <link href="<?php echo ROUTE_URL; ?>css/styles.css" rel="stylesheet">
     <link href="<?php echo ROUTE_URL; ?>css/post.css" rel="stylesheet">
     <link href="<?php echo ROUTE_URL; ?>css/dashboard.css" rel="stylesheet">

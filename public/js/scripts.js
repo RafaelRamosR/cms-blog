@@ -12,8 +12,12 @@ const navBar = (id, view) => {
     if(e.id !== view.id) e.classList.add("d-none");
   }
 }
+const estoEsTemporal = () => {
+  perfile.addEventListener('click', () => { navBar(perfile, viewPerfile) })
+  setting.addEventListener('click', () => { navBar(setting, viewSetting) })
+  comments.addEventListener('click', () => { navBar(comments, viewComments) })
+  dashboard.addEventListener('click', () => { navBar(dashboard, viewDashboard) })
+}
 
-perfile.addEventListener('click', () => { navBar(perfile, viewPerfile) })
-setting.addEventListener('click', () => { navBar(setting, viewSetting) })
-comments.addEventListener('click', () => { navBar(comments, viewComments) })
-dashboard.addEventListener('click', () => { navBar(dashboard, viewDashboard) })
+let menuIcon = document.querySelector(".menu-nav-icon")
+menuIcon.addEventListener('click', ()=>{mainMenu.classList.toggle("visible")})
