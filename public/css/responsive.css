@@ -115,7 +115,10 @@
 
 	footer{ padding: 40px 0 0px; margin-top: 0px; }
 
-	
+	/* My pendejadas */
+  .nav-vertical {
+    display: none;
+  }
 }
 
 /* Screens Resolution : 479px
@@ -140,8 +143,6 @@
 	.main-post ul.post-icons > li > a > i,
 	.main-post ul.icons > li > a > i{ padding: 0; padding-right: 10px; }
 
-
-	
 }
 
 /* Screens Resolution : 359px
