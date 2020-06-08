@@ -12,7 +12,7 @@ Finally, enter the main project address `http://localhost/cms/home`
 
 **Note:** Read *installation* for a more detailed description of the process.
 
-### Pre-requisitos 📋
+### Server requirements 📋
 - **Application Server:** PHP version 7.2 or higher.  
 - **Database:** MySQL/MariaDB 5.5.3 or higher.  
 - **Operating System:** Linux/Unix (Red Hat, CentOS, Debian, FreeBSD, Mandrake, Mac OS, etc.), Windows.  
