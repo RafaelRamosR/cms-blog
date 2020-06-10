@@ -181,3 +181,51 @@
   float: right;
   width: 150px;
 }
+
+
+/* SIDEBAR */
+.sidebar-container {
+  position: absolute;
+  z-index: 2;
+  max-width: 15em;
+  min-height: 100vh;
+  transition: 2s;
+  transform: translate(-101%);
+}
+
+
+.sidebar-container .logo {
+  padding: 0.875rem 1.25rem;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu .menu-item {
+  width: 100%;
+  position: relative;
+  left: 10%;
+}
+
+.menu-item:hover > .submenu {
+  background-color: #1886fd;
+  display: block;
+}
+
+.menu-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-container:hover {
+  transition: 2s;
+  transform: translate(0);
+}
+
+.btn-fixed {
+  position: relative;
+  top: .3em;
+  left: 110%;
+  font-size: 2.5em;
+}

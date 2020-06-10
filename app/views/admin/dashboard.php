@@ -3,12 +3,9 @@
 
 <div class="container-fluid dashboard">
   <div class="row">
-    <div class="row nav-vertical col-md-2">
-      <!-- navbar -->
-      <?php require_once 'navbar.php'; ?>
-    </div>
+    <?php require_once 'navbar.php'; ?>
 
-    <main class="col-md-10 col-sm-12">
+    <main class="col-sm-12">
       <h1 class="text-center mb-5 mt-5">Dashboard</h1>
       <div class="container-fluid">
         <div class="container">
