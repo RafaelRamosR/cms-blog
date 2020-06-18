@@ -1,25 +1,61 @@
-<header>
-  <div class="container-fluid position-relative no-side-padding">
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container">
+    <!--logotipo-->
+    <a class="navbar-brand" href="/cms/home">
+      <img src="<?php echo ROUTE_URL; ?>img/logo.png" alt="Logo Image">
+    </a>
+    <!--/logotipo-->
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-label="Toggle navigation">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- /Collapse button -->
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+      <ul class="nav navbar-nav nav-flex-icons ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/cms/registro">
+            <ion-icon name="shield-checkmark-outline"></ion-icon> Registrarse
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cms/login">
+            <ion-icon name="log-in-outline"></ion-icon> Iniciar sesión
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle pointer" data-toggle="dropdown">
+            <ion-icon name="home"></ion-icon>
+            </ion-icon><span class="d-none d-xl-inline-block ml-1">Home</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/cms/home">Inicio</a>
+            <a class="dropdown-item" href="/cms/categories">Categorias</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle pointer" data-toggle="dropdown">
+            <ion-icon name="person"></ion-icon><span class="d-none d-xl-inline-block ml-1">User Name</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/cms/user/my-user">Ver perfil</a>
+            <a class="dropdown-item" href="/cms/post/write/new">Redactar post</a>
+            <a class="dropdown-item" href="/cms/home">Cerrar sesión</a>
+          </div>
+        </li>
+      </ul>
 
-    <a href="/cms/home" class="logo"><img src="<?php echo ROUTE_URL; ?>img/logo.png" alt="Logo Image"></a>
-
-    <div class="menu-nav-icon" data-nav-menu="#mainMenu"><ion-icon name="menu"></ion-icon></div>
-
-    <ul class="main-menu visible-on-click" id="mainMenu">
-      <li><a href="/cms/home"><ion-icon name="home"></ion-icon> Home</a></li>
-      <li><a href="/cms/categories"><ion-icon name="pricetag"></ion-icon> Categorias</a></li>
-      <li><a href="/cms/user"><ion-icon name="person"></ion-icon> Mi perfil</a></li>
-      <li><a href="/cms/post/write/new"><ion-icon name="reader"></ion-icon> Nuevo post</a></li>
-    </ul><!-- main-menu -->
-
-    <div class="src-area">
-      <form>
-        <button class="src-btn" type="submit">
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
-        <input class="src-input" type="text" placeholder="Type of search">
+      <form class="d-flex">
+        <label class="sr-only" for="search">Username</label>
+        <div class="input-group">
+          <div class="input-group-prepend pointer">
+            <div class="input-group-text">
+              <ion-icon name="search"></ion-icon>
+            </div>
+          </div>
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </div>
       </form>
-    </div>
-
-  </div><!-- conatiner -->
-</header>
+  </div>
+  <!-- /Collapsible content -->
+</nav>

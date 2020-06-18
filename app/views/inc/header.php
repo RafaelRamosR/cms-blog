@@ -2,10 +2,12 @@
 <html lang="es">
 
 <head>
-    <title>TITLE</title>
+    <title>4BLOG</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+      <!-- Favicon -->
+    <link rel="icon" type="image/png" href="<?php echo ROUTE_URL; ?>img/favicon.png">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <!-- trix editor -->

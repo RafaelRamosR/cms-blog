@@ -11,7 +11,7 @@
     <div class="col-lg form-center d-flex justify-content-center align-items-center">
       <div class="container-form">
         <h1 class="register-login-h1">Registro</h1>
-        <p class="register-login-p">Por favor ingrese sus datos para crear su cuenta</p>
+        <p class="register-login-p">Por favor, ingrese sus datos para crear su cuenta</p>
         <form action="registro.php" method="POST" name="registroForm" id="registroForm">
           <input type="hidden" name="csrf" id="csrf">
           <div class="row">

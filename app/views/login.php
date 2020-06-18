@@ -10,7 +10,7 @@
     </div>
     <div class="col-lg form-center d-flex justify-content-center align-items-center">
       <div class="container-form">
-        <h1 class="register-login-h1">Acceso</h1>
+        <h1 class="register-login-h1">4BLOG</h1>
         <p class="register-login-p">¡Bienvenido!, por favor ingresa tus credenciales</p>
         <!-- Action la página a la cuál irá la información del formulario -->
         <!-- Method indica cómo enviaremos la información por el método HTTP -->
@@ -32,7 +32,7 @@
             </div>
             <a href="#" class="forgot__password--link">¿Olvidó su contraseña?</a>
           </div>
-          <div class="d-flex justify-content-lg-between">
+          <div class="d-flex justify-content-lg-center">
             <button type="submit" class="btn btn-login align-self-center" name="acceso" id="acceso">Entrar</button>
           </div>
         </form>

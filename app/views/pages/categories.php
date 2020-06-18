@@ -23,7 +23,7 @@
                     <ion-icon name="chatbubble-outline"></ion-icon>6
                   </a></li>
                 <li><a href="#">
-                    <ion-icon name="heart-eye"></ion-icon>138
+                    <ion-icon name="eye-outline"></ion-icon>138
                   </a></li>
               </ul>
             </div><!-- blog-info -->
@@ -45,7 +45,7 @@
                     <ion-icon name="chatbubble-outline"></ion-icon>6
                   </a></li>
                 <li><a href="#">
-                    <ion-icon name="heart-eye"></ion-icon></i>138
+                    <ion-icon name="eye-outline"></ion-icon></i>138
                   </a></li>
               </ul>
             </div><!-- blog-info -->
@@ -67,7 +67,7 @@
                     <ion-icon name="chatbubble-outline"></ion-icon>6
                   </a></li>
                 <li><a href="#">
-                    <ion-icon name="heart-eye"></ion-icon>138
+                    <ion-icon name="eye-outline"></ion-icon>138
                   </a></li>
               </ul>
             </div><!-- blog-info -->
