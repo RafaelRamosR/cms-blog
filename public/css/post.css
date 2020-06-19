@@ -1,22 +1,20 @@
 /* ---------------------------------
 1. BLOG POST
 --------------------------------- */
-
 .post-area .post-info{ position: relative; padding: 30px 0; }
 
-.post-area .post-info .left-area{ height: 70px; width: 70px; border-radius: 100px; overflow: hidden; position: absolute;
+.post-info .left-area{ height: 70px; width: 70px; border-radius: 100px; overflow: hidden; position: absolute;
 	top: 50%; margin-top: -35px; border: 6px solid #fff; box-shadow: 0px 0px 5px rgba(0,0,0,.3); }
 
-.post-area .post-info .middle-area{ padding-left: 90px; display: inline-block; }
+.post-info .middle-area{ padding-left: 90px; display: inline-block; }
 
-.post-area .post-info .date{ display: inline-block; color: #999; }
+.post-info .date{ display: inline-block; color: #999; }
 
-.post-area .post-info .right-area{ float: right; }
+.post-info .right-area{ float: right; }
 
 /* ---------------------------------
 2. MAIN POST
 --------------------------------- */
-
 .main-post{ margin-top: -100px; padding: 50px 0px 20px; box-shadow: 0px 0px 5px rgba(0,0,0,.1); 
 	border-bottom: 1px solid #eee; background: #fff; }
 
@@ -39,26 +37,22 @@
 /* ---------------------------------
 3. POST COMMENT
 --------------------------------- */
-
 .comment-form{ margin: 30px 0; padding: 30px; box-shadow: 0px 0px 5px rgba(0,0,0,.1); 
 	border: 1px solid #ddd; background: #fff; }
 
 .comment-form .form-control{ margin-bottom: 30px; border-radius: 1px; border: 0; border-bottom: 1px solid #ddd;
 	height: 45px; line-height: 45px; box-shadow: none; padding: 0; max-width: 100%; }
 
-.comment-form textarea.form-control{ height: auto; }
+textarea.form-control{ height: auto; }
 
-.comment-form .form-control:focus{ border-color: #498BF9; }
+.form-control:focus{ border-color: #498BF9; }
 
 .comment-form .submit-btn{ font-size: .8em; border: 0; outline: 0; padding: 10px 20px; cursor: pointer; 
 	border: 1px solid #D2E2FC; background: #D2E2FC; }
 
 .comment-form .submit-btn:hover{ background: none; }
 
-
-
 /* 4. COMMENTS */
-
 .commnets-area{ padding: 30px 40px; margin: 30px 0; overflow: hidden; box-shadow: 0px 0px 5px rgba(0,0,0,.1); 
 	background: #fff; }
 
@@ -69,7 +63,6 @@
 .comment .reply-for{ margin-bottom: 20px; }
 
 /* 5.INFO AUTHOR */
-
 .post-info{ position: relative; padding: 30px 0; }
 
 .post-info .left-area{ height: 70px; width: 70px; border-radius: 100px; overflow: hidden; position: absolute;
@@ -81,7 +74,6 @@
 
 .post-info .right-area{ float: right; }
 
-
 .more-comment-btn{ display: block; margin-bottom: 30px; padding: 10px; text-align: center; 
 	box-shadow: 0px 0px 5px rgba(0,0,0,.1); border: 1px solid #fff; background: #fff; color: #555; }
 
@@ -90,143 +82,62 @@
 /* ---------------------------------
 6. SOCIAL ICONS
 --------------------------------- */
-
 /* My Modifications - USER */
 
 h2.pre-title { font-size: 1.2em; letter-spacing: 1px; }
 
 .bio { font-size: 1.4em; }
 
-.perfile-picture {
-  width: 200px;
-}
+.perfile-picture { width: 200px;}
 
 /* BIOGRAPHY */
-.perfile {
-	background-color: hsla(0, 0%, 80%, 1);
-}
+.perfile { background-color: hsla(0, 0%, 80%, 1); }
 
-.perfile-navbar{
-	display:grid;
-	width: 100%;
-	height: 3em;
-}
+.perfile-navbar{ display:grid; width: 100%; height: 3em; }
 
-.perfile-items {
-	display: grid;
-	grid-template-columns: 1fr 2fr 2fr 2fr;
-	font-size: 1.3em;
-	align-items: end;
-  text-align: center;
-  cursor: pointer;
-}
+.perfile-items { display: grid; grid-template-columns: 1fr 2fr 2fr 2fr; font-size: 1.3em;
+   align-items: end; text-align: center; cursor: pointer; }
 
-.perfile-item {
-	--border-color: #000;
-	border-bottom: solid var(--border-color);
-}
+.perfile-item { --border-color: #000; border-bottom: solid var(--border-color); }
 
-.selectItem {
-  --border-color: #498bf9;
-  color: var(--border-color);
-	border-bottom: solid var(--border-color);
-}
+.selectItem { --border-color: #498bf9; color: var(--border-color); border-bottom: solid var(--border-color); }
 
 /* PERFILE - DASHBOOARD */
-.list-comment {
-  height: 278px;
-  overflow-y: auto;
-}
+.list-comment { height: 278px; overflow-y: auto; }
 
-.list-item {
-  margin: 10px 20px;
-  padding: 0 30px;
-  background-color: #edf3f3;
-}
+.list-item { margin: 10px 20px; padding: 0 30px; background-color: #edf3f3; }
 
 
 @media only screen and (max-width: 600px) {
   /* Break out main icons into two columns */
-  .user-icons {
-    grid-template-columns: repeat(2,1fr) !important;
-  }
+  .user-icons { grid-template-columns: repeat(2,1fr) !important; }
 }
 
-.user-icons, .social-icons {
-  display: grid;
-  grid-gap: 0.1em;
-  grid-auto-rows: minmax(3em, auto);
-}
+.user-icons, .social-icons { display: grid; grid-gap: 0.1em; grid-auto-rows: minmax(3em, auto); }
 
-.social-icons {
-  grid-template-columns: repeat(6,1fr);
-}
+.social-icons { grid-template-columns: repeat(6,1fr); }
 
-.user-icons {
-  grid-template-columns: repeat(4,1fr);
-}
+.user-icons { grid-template-columns: repeat(4,1fr); }
 
-.social-icon {
-  display: grid;
-  font-size: 2.5em;
-}
+.social-icon { display: grid; font-size: 2.5em; }
 
-.user-icon {
-  display: flex;
-  font-size: 1.1em;
-}
+.user-icon { display: flex; font-size: 1.1em; }
 
-.user-icon, .social-icon {
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin: 0 0.5rem;
-  cursor: pointer;
-  text-decoration: none;
-}
+.user-icon, .social-icon { align-items: center; justify-content: center; position: relative; 
+  margin: 0 0.5rem; cursor: pointer; text-decoration: none; }
 
-.user-icon span {
-  padding: 0 .5em;
-}
+.user-icon span { padding: 0 .5em; }
 
-.btn-heart {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	position: absolute;
-	right:2em;
-	top:-2em;
-	font-size: 2em;
-	padding:0;
-}
+.btn-heart { display: grid; grid-template-columns: 1fr 1fr;	position: absolute; 
+  right:2em; top:-2em; font-size: 2em; padding:0; }
 
-.btn-heart:hover ion-icon{
-	color: red;
-}
+.btn-heart:hover ion-icon{ color: red; }
 
-.btn-heart span {
-	font-size: .7em;
-}
+.btn-heart span { font-size: .7em; }
 
 /* write post */
-[contenteditable="true"]:focus {
-  outline: 0px solid transparent;
-  border-style: dashed ;
-}
+[contenteditable="true"]:focus { outline: 0px solid transparent; border-style: dashed ; }
 
-.btn-form {
-  position: relative;
-  padding: 7px 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border: 1px solid #ddd;
-  background: #ddd;
-}
+.btn-form { position: relative; padding: 7px 10px; margin-bottom: 10px; margin-right: 10px; border: 1px solid #ddd; background: #ddd; }
 
-.form-file {
-  display: grid;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding-left: 25%;
-  padding-top: 50%;
-}
+.form-file { display: grid; position: absolute; width: 100%; height: 100%; padding-left: 25%; padding-top: 50%; }

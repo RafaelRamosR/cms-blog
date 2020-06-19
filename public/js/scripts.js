@@ -18,6 +18,3 @@ const estoEsTemporal = () => {
   comments.addEventListener('click', () => { navBar(comments, viewComments) })
   dashboard.addEventListener('click', () => { navBar(dashboard, viewDashboard) })
 }
-
-let menuIcon = document.querySelector(".menu-nav-icon")
-menuIcon.addEventListener('click', ()=>{mainMenu.classList.toggle("visible")})

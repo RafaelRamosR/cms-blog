@@ -579,10 +579,10 @@
     <h1 class="text-center mb-5">Dashboard</h1>
     <div class="container-fluid">
       <div class="container">
-        <div class="row" id="portfolio">
+        <div class="row portfolio">
           <!-- views count -->
           <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-            <div class="card" id="storageCard">
+            <div class="card storageCard">
               <div class="card-title">Visitas</div>
               <div class="card-icon">
                 <ion-icon name="eye-outline"></ion-icon>
@@ -596,7 +596,7 @@
           </div>
           <!-- reactions count -->
           <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-            <div class="card" id="loveCard">
+            <div class="card loveCard">
               <div class="card-title">Amor recibido</div>
               <div class="card-icon">
                 <ion-icon name="heart-outline"></ion-icon>
@@ -610,7 +610,7 @@
           </div>
           <!-- followers count -->
           <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-            <div class="card" id="pizzaCard">
+            <div class="card peopleCard">
               <div class="card-title">Seguidores</div>
               <div class="card-icon">
                 <ion-icon name="people-outline"></ion-icon>
@@ -624,7 +624,7 @@
           </div>
           <!-- comments count -->
           <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-            <div class="card" id="gameCard">
+            <div class="card commentCard">
               <div class="card-title">Comentarios</div>
               <div class="card-icon">
                 <ion-icon name="chatbox-ellipses-outline"></ion-icon>

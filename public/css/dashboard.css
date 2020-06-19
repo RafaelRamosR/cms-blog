@@ -1,51 +1,42 @@
-
-#about {
-  padding: 16px;
-}
-
-.bdr {
-  border: 1px solid red;
-}
-
-#portfolio .card {
+.portfolio .card {
   margin: 0 -8px 32px -8px;
   color: rgba(0, 0, 0, 0.87);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   background-color: #fff;
 }
-#portfolio .card .card-title {
+.portfolio .card .card-title {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   padding: 16px;
   font-weight: 300;
 }
-#portfolio .card .card-data {
+.portfolio .card .card-data {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   padding: 16px 16px 0 0;
   font-size: 1.5rem;
   font-weight: 300;
 }
-#portfolio .card hr {
+.portfolio .card hr {
   width: 90%;
 }
-#portfolio .card .card-hint {
+.portfolio .card .card-hint {
   display: -webkit-box;
   display: flex;
   padding: 0 0 8px 8px;
   font-size: 0.9rem;
   font-weight: 300;
 }
-#portfolio .card .card-hint ion-icon {
+.portfolio .card .card-hint ion-icon {
   font-size: 1.3rem;
   color: red;
   margin-right: 8px;
 }
-#portfolio .card .card-icon {
+.portfolio .card .card-icon {
   display: -webkit-box;
   display: flex;
   position: absolute;
@@ -62,31 +53,31 @@
           justify-content: center;
   border-radius: 25%;
 }
-#portfolio .card .card-icon ion-icon {
+.portfolio .card .card-icon ion-icon {
   font-size: 4rem;
 }
-#portfolio #storageCard .card-icon {
+.portfolio .storageCard .card-icon {
   background: linear-gradient(60deg, #5E35B1, #039BE5);
 }
-#portfolio #storageCard .card-hint ion-icon {
+.portfolio .storageCard .card-hint ion-icon {
   color: red;
 }
-#portfolio #loveCard .card-icon {
+.portfolio .loveCard .card-icon {
   background: linear-gradient(60deg, #F50057, #FF8A80);
 }
-#portfolio #loveCard .card-hint ion-icon {
+.portfolio .loveCard .card-hint ion-icon {
   color: blue;
 }
-#portfolio #pizzaCard .card-icon {
+.portfolio .peopleCard .card-icon {
   background: linear-gradient(60deg, #fb8c00, #FFCA29);
 }
-#portfolio #pizzaCard .card-hint ion-icon {
+.portfolio .peopleCard .card-hint ion-icon {
   color: red;
 }
-#portfolio #gameCard .card-icon {
+.portfolio .commentCard .card-icon {
   background: linear-gradient(60deg, #43A047, #FFEB3B);
 }
-#portfolio #gameCard .card-hint ion-icon {
+.portfolio .commentCard .card-hint ion-icon {
   color: green;
 }
 
@@ -192,7 +183,6 @@
   transition: 2s;
   transform: translate(-101%);
 }
-
 
 .sidebar-container .logo {
   padding: 0.875rem 1.25rem;

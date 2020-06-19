@@ -9,60 +9,60 @@
       <h1 class="text-center mb-5 mt-5">Dashboard</h1>
       <div class="container-fluid">
         <div class="container">
-          <div class="row" id="portfolio">
+          <div class="row portfolio">
             <!-- users count -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <div class="card" id="storageCard">
+              <div class="card peopleCard">
                 <div class="card-title">Usuarios</div>
                 <div class="card-icon">
                   <ion-icon name="people-outline"></ion-icon>
                 </div>
-                <div class="card-data">999</div>
+                <div class="card-data">1200</div>
                 <hr />
                 <div class="card-hint">
-                  <ion-icon name="people-outline"></ion-icon><a href="#">Mira las estadísticas.</a>
+                  <ion-icon name="people-outline"></ion-icon><a href="#">Observa las estádisticas.</a>
                 </div>
               </div>
             </div>
             <!-- articles count -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <div class="card" id="loveCard">
+              <div class="card storageCard">
                 <div class="card-title">Artículos</div>
                 <div class="card-icon">
                   <ion-icon name="reader-outline"></ion-icon>
                 </div>
-                <div class="card-data">501</div>
+                <div class="card-data">999</div>
                 <hr />
                 <div class="card-hint">
-                  <ion-icon name="reader-outline"></ion-icon><a href="#">Comparte tus logros.</a>
-                </div>
-              </div>
-            </div>
-            <!-- comments count -->
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <div class="card" id="pizzaCard">
-                <div class="card-title">Comentarios</div>
-                <div class="card-icon">
-                  <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-                </div>
-                <div class="card-data">1200</div>
-                <hr />
-                <div class="card-hint">
-                  <ion-icon name="chatbox-ellipses-outline"></ion-icon><a href="#">Observa las estádisticas.</a>
+                  <ion-icon name="reader-outline"></ion-icon><a href="#">Mira las estadísticas.</a>
                 </div>
               </div>
             </div>
             <!-- reactions count -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <div class="card" id="gameCard">
+              <div class="card loveCard">
                 <div class="card-title">Reacciones</div>
                 <div class="card-icon">
                   <ion-icon name="heart-outline"></ion-icon>
                 </div>
+                <div class="card-data">501</div>
+                <hr />
+                <div class="card-hint">
+                  <ion-icon name="heart-outline"></ion-icon><a href="#">Comparte tus logros.</a>
+                </div>
+              </div>
+            </div>
+            <!-- comments count -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+              <div class="card commentCard">
+                <div class="card-title">Comentarios</div>
+                <div class="card-icon">
+                  <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                </div>
                 <div class="card-data">1800</div>
                 <hr />
                 <div class="card-hint">
-                  <ion-icon name="heart-outline"></ion-icon><a href="#">Comentarios recientes</a>
+                  <ion-icon name="chatbox-ellipses-outline"></ion-icon><a href="#">Comentarios recientes</a>
                 </div>
               </div>
             </div>
@@ -241,8 +241,16 @@
   commentDataColor.addColorStop(0, "#FB8C00")
   commentDataColor.addColorStop(1, "#FFCA29");
 
-  const viewData = {
-    label: "Visitas",
+  const registerData = {
+    label: "Usuarios",
+    data: [0, 15, 30, 40, 10, 50],
+    fill: false,
+    pointBackgroundColor: commentDataColor,
+    borderColor: commentDataColor
+  };
+
+  const articleData = {
+    label: "Articulos",
     data: [0, 59, 75, 20, 20, 55, 40],
     fill: false,
     pointBackgroundColor: viewDataColor,
@@ -258,25 +266,17 @@
     borderColor: reactionDataColor
   };
 
-  const followData = {
-    label: "Articulos",
+  const commentData = {
+    label: "Comentarios",
     data: [3, 6, 5, 10, 4, 23],
     fill: false,
     pointBackgroundColor: followDataColor,
     borderColor: followDataColor
   };
 
-  const commentData = {
-    label: "Comentarios",
-    data: [0, 15, 30, 40, 10, 50],
-    fill: false,
-    pointBackgroundColor: commentDataColor,
-    borderColor: commentDataColor
-  };
-
   const userData = {
     labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"],
-    datasets: [viewData, reactionData, followData, commentData]
+    datasets: [registerData, articleData, reactionData, commentData]
   };
 
   const chartOptions = {

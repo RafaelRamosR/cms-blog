@@ -92,7 +92,7 @@
                 <a class="avatar" href="#"><img src="<?php echo ROUTE_URL; ?>img/post/avatar-1-120x120.jpg" alt="Profile Image"></a>
               </div>
 
-              <div class="middle-area">
+              <div class="middle-area text-left">
                 <a class="name" href="#"><b>Katy Liu</b></a>
                 <h6 class="date">on Sep 29, 2017 at 9:48 am</h6>
               </div>
