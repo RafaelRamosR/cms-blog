@@ -1,5 +1,5 @@
 <?php require_once ROUTE_APP . '/views/inc/header.php'; ?>
-<?php require_once ROUTE_APP . '/views/inc/menu.php'; ?>
+<?php require_once ROUTE_APP . '/views/inc/menu.php'; //foreach($data['users'] as $result): echo $result->email; endforeach; ?>
 
 <div class="container-fluid register-login">
   <div class="row wrapper">
@@ -12,36 +12,38 @@
       <div class="container-form">
         <h1 class="register-login-h1">Registro</h1>
         <p class="register-login-p">Por favor, ingrese sus datos para crear su cuenta</p>
-        <form action="registro.php" method="POST" name="registroForm" id="registroForm">
-          <input type="hidden" name="csrf" id="csrf">
+        <form action="<?php echo ROUTE_URL; ?>registro/register/" method="POST" name="formRegister" id="formRegister" autocomplete="off">
           <div class="row">
             <div class="col-lg">
               <div class="form-group">
-                <input type="text" id="nombre" name="nombre" class="form-control" required>
-                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+                <label for="name" class="form-label">Nombre</label>
               </div>
             </div>
 
             <div class="col-lg">
               <div class="form-group">
-                <input type="text" id="apodo" name="apodo" class="form-control" required>
-                <label for="apodo" class="form-label">Apodo</label>
+                <input type="text" id="lastname" name="lastname" class="form-control" required>
+                <label for="lastname" class="form-label">Apellido</label>
               </div>
             </div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="nickname" name="nickname" class="form-control" required>
+            <label for="nickname" class="form-label">Alias</label>
           </div>
 
           <div class="form-group">
             <input type="email" id="email" name="email" class="form-control" required>
             <label for="email" class="form-label">E-mail</label>
           </div>
+
           <div class="form-group">
             <input type="password" id="password" name="password" class="form-control" required>
             <label for="password" class="form-label">Contraseña</label>
           </div>
-          <div class="form-group margin--bottom">
-            <input type="password" id="confirmarpass" name="confirmarpass" class="form-control" required>
-            <label for="confirmpassword" class="form-label">Confirmar contraseña</label>
-          </div>
+
           <div class="d-flex justify-content-between">
             <div class="d-flex align-items-center">
               <div class="d-flex align-items-center">
@@ -52,7 +54,7 @@
             </div>
           </div>
           <div class="d-flex justify-content-lg-center">
-            <button type="submit" name="registrar" class="btn btn-signup--register align-self-center">Aceptar</button>
+            <button type="submit" name="btn-register" class="btn btn-signup--register align-self-center">Aceptar</button>
           </div>
           <a href="#" class="register-link--haveaccount">¿Ya tiene una contraseña? Entrar</a>
         </form>

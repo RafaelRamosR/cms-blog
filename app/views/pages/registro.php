@@ -1,5 +1,4 @@
 <?php
-
     require('core/request.php');
 
     session_start();

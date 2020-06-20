@@ -1,7 +1,7 @@
 <?php
-require_once 'ModeloBase.php';
+require_once 'MainModel.php';
 
-class Usuario extends ModeloBase {
+class Usuario extends MainModel {
 	public $nombre;
 	public $apodo;
 	public $email;
@@ -36,15 +36,15 @@ class Usuario extends ModeloBase {
 	}
 
 	function guardarUsuario($datos) {
-		$db = new ModeloBase();
-		$insertar = $db->insertar('usuarios', $datos);
+		$db = new MainModel();
+		$insertar = $db->insert('usuarios', $datos);
 		if ($insertar == true) {
 			$_SESSION['mensaje'] = 'Registro exitoso';
 		}
 	}
 
 	public function accesoUsuario($apodo, $password) {
-		$db = new ModeloBase();
+		$db = new MainModel();
 		$query = "SELECT * FROM usuarios WHERE apodo = '".$apodo. "' AND password = '".$password . "'";
 		$respuesta = $db->consultar($query);
 		if ($respuesta == true) {

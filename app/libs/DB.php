@@ -1,103 +1,90 @@
 <?php
+
+// Clase para conectar a la base de datos y ejecutar consultas PDO
 class DB extends PDO {
-	private $hostname = 'localhost';
-	private $database = 'farmacia';
-	private $username = 'root';
-	private $password = '';
-	private $pdo;
-	private $sQuery;
-	private $bConnected = false;
-	private $parameters;
+  private $host = DB_HOST;
+  private $user = DB_USER;
+  private $password = DB_PASSWORD;
+  private $db_name = DB_NAME;
+  private $dbh;
+  private $stmt; // statment
+  private $error;
 
-	public function __construct() {
-		$dsn = 'mysql:dbname='.$this->database.';host='.$this->hostname;
-		parent::__construct($dsn, $this->username, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-	}
+  public function __construct()
+  {
+    // configurar conexión
+    $dsn = 'mysql::host=' . $this->host . ';dbname=' . $this->db_name;
+    $options = array(
+      PDO::ATTR_PERSISTENT => true,
+      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    );
+    
+    // Instancia de PDO
+    try
+    {
+      $this->dbh = new PDO($dsn, $this->user, $this->password, $options);
+      // Carácteres especiales
+      $this->dbh->exec('set names utf8');
+    }
+    catch (PDOException $e)
+    {
+      $this->error = $e->getMessage();
+      echo $this->error;
+    }
+  }
 
-	/*private function connection() {
-		$dsn = 'mysql:dbname='.$this->database.';host='.$this->hostname;
-		try {
-			$this->pdo = new PDO($dsn, $this->username, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
-			#$this->bConnected = true;
-			return $this->pdo;
-		} catch (PDOException $e) {
-			echo $e->getMessage();
-			die();
-		}
-	}*/
+  //Preparar la consulta
+  public function query($sql)
+  {
+    $this->stmt = $this->dbh->prepare($sql);
+  }
 
+  // Vincular la consulta con bind
+  public function bind($parameter, $value, $type = null)
+  {
+    if (is_null($type)) {
+      switch (true) {
+        case is_int($value):
+          $type = PDO::PARAM_INT;
+          break;
+        case is_bool($value):
+          $type = PDO::PARAM_BOOL;
+          break;
+        case is_null($value):
+          $type = PDO::PARAM_NULL;
+          break;
+        default:
+          $type = PDO::PARAM_STR;
+          break;
+      }
+    }
+    $this->stmt->bindValue($parameter, $value, $type);
+  }
+
+  // Ejecutar la consulta
+  public function execute()
+  {
+    return $this->stmt->execute();
+  }
+
+  // Obtener todos los registros
+  public function allRegisters()
+  {
+    $this->execute();
+    return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+  }
+
+  // Obtener un solo registro
+  public function oneRegister()
+  {
+    $this->execute();
+    return $this->stmt->rowCount();
+  }
+
+  // Obtener cantidad de filas con el método rowCount
+
+  // Cerrar conexión PDO
 	public function CloseConnection() {
 	 	$this->pdo = null;
 	}
-
-	private function Init($query,$parameters = "") {
-		if (!$this->bConnected) { $this->Connect(); }
-		try {
-			$this->sQuery = $this->pdo->prepare($query);
-
-			$this->bindMore($parameters);
-			if(!empty($this->parameters)) {
-				foreach($this->parameters as $param) {
-					$parameters = explode("\x7F",$param);
-					$this->sQuery->bindParam($parameters[0],$parameters[1]);
-				}
-			}
-			$this->success = $this->sQuery->execute();
-		} catch(PDOException $e) {
-				echo $e->getMessage();
-		}
-		$this->parameters = array();
-	}
-
-	public function bind($para, $value) {
-		$this->parameters[sizeof($this->parameters)] = ":" . $para . "\x7F" . utf8_encode($value);
-	}
-
-	public function bindMore($parray) {
-		if(empty($this->parameters) && is_array($parray)) {
-			$columns = array_keys($parray);
-			foreach($columns as $i => &$column)	{
-				$this->bind($column, $parray[$column]);
-			}
-		}
-	}
-
-	/*public function query($query,$params = null, $fetchmode = PDO::FETCH_ASSOC) {
-		$query = trim($query);
-		$this->Init($query,$params);
-		$rawStatement = explode(" ", $query);
-		$statement = strtolower($rawStatement[0]);
-		if ($statement === 'select' || $statement === 'show') {
-			return $this->sQuery->fetchAll($fetchmode);
-		} elseif ( $statement === 'insert' ||  $statement === 'update' || $statement === 'delete' ) {
-			return $this->sQuery->rowCount();
-		} else {
-			return NULL;
-		}
-	}*/
-
-	public function column($query,$params = null) {
-		$this->Init($query,$params);
-		$Columns = $this->sQuery->fetchAll(PDO::FETCH_NUM);
-		$column = null;
-		foreach($Columns as $cells) {
-			$column[] = $cells[0];
-		}
-		return $column;
-
-	}
-
-	public function row($query,$params = null,$fetchmode = PDO::FETCH_ASSOC) {
-		$this->Init($query,$params);
-		return $this->sQuery->fetch($fetchmode);
-	}
-
-	public function single($query,$params = null) {
-		$this->Init($query,$params);
-		return $this->sQuery->fetchColumn();
-	}
-
 }
-?>
