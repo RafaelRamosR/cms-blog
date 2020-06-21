@@ -1,5 +1,5 @@
 <?php
-
+require_once ROUTE_APP . '/helpers/hash_helper.php';
   class Registro extends Controller {
     public function __construct() {
       $this->register = $this->model('Register');
@@ -22,13 +22,13 @@
           'name' => trim($_POST['name']),
           'lastname' => trim($_POST['lastname']),
           'email' => trim($_POST['email']),
-          'password' => trim($_POST['password'])
+          'password' => generate_hash(trim($_POST['password']))
         ];
         
         if($this->register->registerUser($data)){
           header('location:' . ROUTE_URL . 'registro');
         }else{
-          echo "Mal";
+          echo "Mensaje de error";
         }
       }
     }
