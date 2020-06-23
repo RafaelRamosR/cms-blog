@@ -12,13 +12,12 @@
       <div class="container-form">
         <h1 class="register-login-h1">4BLOG</h1>
         <p class="register-login-p">¡Bienvenido!, por favor ingresa tus credenciales</p>
-        <!-- Action la página a la cuál irá la información del formulario -->
-        <!-- Method indica cómo enviaremos la información por el método HTTP -->
-        <!-- enctype multipart/form-data permite agregar archivos -->
-        <form action="login.php" method="POST" name="loginForm" id="loginForm">
+
+        <form action="<?php echo ROUTE_URL; ?>login/check_login/" method="POST" name="loginForm" id="loginForm">
+          <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
           <div class="form-group">
-            <input type="text" id="apodo" name="apodo" class="form-control" required>
-            <label for="apodo" class="form-label">Usuario</label>
+            <input type="text" id="nickname" name="nickname" class="form-control" required>
+            <label for="nickname" class="form-label">Usuario</label>
           </div>
           <div class="form-group margin--bottom">
             <input type="password" id="password" name="password" class="form-control" required>
@@ -33,9 +32,10 @@
             <a href="#" class="forgot__password--link">¿Olvidó su contraseña?</a>
           </div>
           <div class="d-flex justify-content-lg-center">
-            <button type="submit" class="btn btn-login align-self-center" name="acceso" id="acceso">Entrar</button>
+            <button type="submit" class="btn btn-login align-self-center" name="btn-login" id="btn-login">Entrar</button>
           </div>
         </form>
+
       </div>
     </div>
 

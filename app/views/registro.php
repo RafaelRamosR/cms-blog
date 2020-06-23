@@ -1,5 +1,5 @@
 <?php require_once ROUTE_APP . '/views/inc/header.php'; ?>
-<?php require_once ROUTE_APP . '/views/inc/menu.php'; //foreach($data['users'] as $result): echo $result->email; endforeach; ?>
+<?php require_once ROUTE_APP . '/views/inc/menu.php'; ?>
 
 <div class="container-fluid register-login">
   <div class="row wrapper">
@@ -13,6 +13,8 @@
         <h1 class="register-login-h1">Registro</h1>
         <p class="register-login-p">Por favor, ingrese sus datos para crear su cuenta</p>
         <form action="<?php echo ROUTE_URL; ?>registro/register/" method="POST" name="formRegister" id="formRegister" autocomplete="off">
+          <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
+
           <div class="row">
             <div class="col-lg">
               <div class="form-group">
