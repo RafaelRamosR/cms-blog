@@ -172,6 +172,20 @@
   .register-login .margin--bottom {
     margin-bottom: 40px; }
 
+/* VALIDATE */
+
+.has-error .form-control:valid {
+  border-bottom: 1px solid #ff0000;
+}
+.has-success .form-control:valid {
+  border-bottom: 1px solid #00ff00;
+}
+.text-error {
+  margin-bottom: 5px;
+  color: #ff0000;
+}
+
+/* RESPONSIVE */
 @media screen and (min-width: 1400px) {
   .register-login .bg-image-container {
     width: 50%; } }
