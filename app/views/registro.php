@@ -72,178 +72,78 @@
 </div>
 
 <?php require_once ROUTE_APP . '/views/inc/footer.php'; ?>
-
+<script src="<?php echo ROUTE_URL; ?>js/form-validate.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 <script>
-  (() => {
-    // These are the constraints used to validate the form
-    const constraints = {
-      name: {
-        // You need to pick a name too
-        presence: true,
-        // And it must be between 3 and 20 characters long
-        length: {
-          minimum: 3,
-          tooShort: "^Demasiado corto (mínimo 3 caracteres)",
-          maximum: 50,
-          tooLong: "^Demasiado largo (máximo 50 caracteres)"
-        },
-        format: {
-          // We don't allow anything that a-Z
-          pattern: "^[a-z|A-Z|ñáéíóú]*$",
-          // but we don't care if the name is uppercase or lowercase
-          flags: "i",
-          message: "^Solo letras sin espacios"
-        }
+  const constraints = {
+    name: {
+      // You need to pick a name too
+      presence: true,
+      // And it must be between 3 and 20 characters long
+      length: {
+        minimum: 3,
+        tooShort: "^Demasiado corto (mínimo 3 caracteres)",
+        maximum: 50,
+        tooLong: "^Demasiado largo (máximo 50 caracteres)"
       },
-      lastname: {
-        presence: true,
-        length: {
-          minimum: 3,
-          tooShort: "^Demasiado corto (mínimo 3 caracteres)",
-          maximum: 50,
-          tooLong: "^Demasiado largo (máximo 50 caracteres)"
-        },
-        format: {
-          pattern: "^[a-z|A-Z|ñáéíóú]*$",
-          flags: "i",
-          message: "^Solo letras sin espacios"
-        }
-      },
-      nickname: {
-        presence: true,
-        length: {
-          minimum: 3,
-          tooShort: "^Demasiado corto (mínimo 3 caracteres)",
-          maximum: 20,
-          tooLong: "^Demasiado largo (máximo 20 caracteres)"
-        },
-        format: {
-          pattern: "[a-z0-9]+",
-          flags: "i",
-          message: "can only contain a-z and 0-9"
-        }
-      },
-      email: {
-        // Email is required
-        presence: true,
-        // and must be an email (duh)
-        email: true
-      },
-      password: {
-        // Password is also required
-        presence: true,
-        length: {
-          minimum: 8,
-          tooShort: "^Demasiado corto (mínimo 8 caracteres)",
-          maximum: 50,
-          tooLong: "^Demasiado largo (máximo 50 caracteres)"
-        }
-      },
-      "i-agree": {
-        // You also need to input where you live
-        presence: {
-          message: "^Debe aceptar los términos y condiciones."
-        }
+      format: {
+        // We don't allow anything that a-Z
+        pattern: "^[a-z|A-Z|ñáéíóú]*$",
+        // but we don't care if the name is uppercase or lowercase
+        flags: "i",
+        message: "^Solo letras sin espacios"
       }
-    };
-
-    // Hook up the form so we can prevent it from being posted
-    const form = document.querySelector("#formRegister");
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      handleFormSubmit(form);
-    });
-
-    // Hook up the inputs to validate on the fly
-    const inputs = document.querySelectorAll("input, textarea, select");
-    for (let item of inputs) {
-      item.addEventListener("change", () => {
-        const errors = validate(form, constraints) || {};
-        showErrorsForInput(item, errors[item.name])
-      });
-    }
-
-
-    const handleFormSubmit = (form) => {
-      // validate the form against the constraints
-      const errors = validate(form, constraints);
-      if (!errors) {
-        return showSuccess();
+    },
+    lastname: {
+      presence: true,
+      length: {
+        minimum: 3,
+        tooShort: "^Demasiado corto (mínimo 3 caracteres)",
+        maximum: 50,
+        tooLong: "^Demasiado largo (máximo 50 caracteres)"
+      },
+      format: {
+        pattern: "^[a-z|A-Z|ñáéíóú]*$",
+        flags: "i",
+        message: "^Solo letras sin espacios"
       }
-      // then we update the form to reflect the results
-      showErrors(form, errors || {});
-    }
-
-    // Updates the inputs with the validation errors
-    const showErrors = (form, errors) => {
-      // We loop through all the inputs and show the errors for that input
-      const arr = form.querySelectorAll("input[name], select[name]")
-      // Since the errors can be null if no errors were found we need to handle
-      arr.forEach(input => {
-        showErrorsForInput(input, errors && errors[input.name]);
-      });
-    }
-
-    // Shows the errors for a specific input
-    const showErrorsForInput = (input, errors) => {
-      // This is the root of the input
-      const formGroup = closestParent(input.parentNode, "form-group")
-      //Not all inputs need validation like hidden types
-      if(formGroup != null){
-        // Find where the error messages will be insert into
-        const messages = formGroup.querySelector(".messages");
-        // First we remove any old messages and resets the classes
-        resetFormGroup(formGroup);
-        // If we have errors
-        if (errors) {
-          // we first mark the group has having errors
-          formGroup.classList.add("has-error");
-          // then we append all the errors
-          errors.forEach(error => {
-            addError(messages, error);
-          });
-        } else {
-          // otherwise we simply mark it as success
-          formGroup.classList.add("has-success");
-        }
+    },
+    nickname: {
+      presence: true,
+      length: {
+        minimum: 3,
+        tooShort: "^Demasiado corto (mínimo 3 caracteres)",
+        maximum: 20,
+        tooLong: "^Demasiado largo (máximo 20 caracteres)"
+      },
+      format: {
+        pattern: "[a-z0-9]+",
+        flags: "i",
+        message: "can only contain a-z and 0-9"
+      }
+    },
+    email: {
+      // Email is required
+      presence: true,
+      // and must be an email (duh)
+      email: true
+    },
+    password: {
+      // Password is also required
+      presence: true,
+      length: {
+        minimum: 8,
+        tooShort: "^Demasiado corto (mínimo 8 caracteres)",
+        maximum: 50,
+        tooLong: "^Demasiado largo (máximo 50 caracteres)"
+      }
+    },
+    "i-agree": {
+      // You also need to input where you live
+      presence: {
+        message: "^Debe aceptar los términos y condiciones."
       }
     }
-
-    // Recusively finds the closest parent that has the specified class
-    const closestParent = (child, className) => {
-      if (!child || child == document) {
-        return null;
-      }
-      if (child.classList.contains(className)) {
-        return child;
-      }
-      return closestParent(child.parentNode, className);
-    }
-
-    const resetFormGroup = (formGroup) => {
-      // Remove the success and error classes
-      formGroup.classList.remove("has-error");
-      formGroup.classList.remove("has-success");
-      // and remove any oldmessages
-      const arr = formGroup.querySelectorAll(".text-error")
-      arr.forEach(el => {
-        el.parentNode.removeChild(el);
-      });
-    }
-
-    // Adds the specified error with the following markup
-    // <p class="text-error">[message]</p>
-    const addError = (messages, error) => {
-      const block = document.createElement("p");
-      block.classList.add("text-error");
-      block.innerText = error;
-      messages.appendChild(block);
-    }
-
-    const showSuccess = () => {
-      // We made it \:D/
-      alert("Success!");
-    }
-  })();
+  };
+  formValidate(constraints);
 </script>

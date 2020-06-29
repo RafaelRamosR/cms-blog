@@ -16,8 +16,7 @@ const formValidate = (constraints) => {
       });
     }
 
-
-    const handleFormSubmit = (form, constraints) => {
+    const handleFormSubmit = (form) => {
       // validate the form against the constraints
       const errors = validate(form, constraints);
       if (!errors) {
