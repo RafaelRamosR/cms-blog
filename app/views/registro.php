@@ -12,7 +12,7 @@
       <div class="container-form">
         <h1 class="register-login-h1">Registro</h1>
         <p class="register-login-p">Por favor, ingrese sus datos para crear su cuenta</p>
-        <form action="<?php echo ROUTE_URL; ?>registro/register/" method="POST" name="formRegister" id="formRegister" autocomplete="off">
+        <form name="formRegister" id="formRegister" autocomplete="off">
           <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
 
           <div class="row">

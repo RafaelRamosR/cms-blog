@@ -95,5 +95,23 @@ const formValidate = (constraints) => {
     const showSuccess = () => {
       // We made it \:D/
       alert("Success!");
+      formRegister.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(formRegister);
+        fetch('http://localhost/cms/hola', {
+          method: 'POST',
+          body: data
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data === 'error'){
+            console.log('Esto es un error')
+          }else if(data != 'error'){
+            console.log('Esto no es un error')
+          }else{
+            console.log('Nada de nada')
+          }
+        })
+      });
     }
   };
